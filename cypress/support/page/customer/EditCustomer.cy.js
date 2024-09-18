@@ -1,6 +1,6 @@
 export class editCustomerPage {
   editCustomer = (customerId, updatedInfoCustomer) => {
-    cy.contains("Edit Customer").click();
+    cy.get(".menusubnav").contains("Edit Customer").click();
     cy.visit("manager/EditCustomer.php");
     cy.get('input[name="cusid"]').type(customerId);
     cy.get('input[name="AccSubmit"]').click();

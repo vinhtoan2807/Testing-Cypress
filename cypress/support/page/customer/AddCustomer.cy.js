@@ -1,8 +1,5 @@
-import { loginPage } from "../login/LoginPage.cy";
 export class createCustomerPage {
   createCustomer = (infoCustomer) => {
-    const loginSuccess = new loginPage();
-    loginSuccess.loginSuccessful();
     cy.contains("New Customer").click();
     cy.visit("manager/addcustomerpage.php");
     cy.get('input[name="name"]').type(infoCustomer.name);
@@ -11,7 +8,7 @@ export class createCustomerPage {
     cy.get('input[name="city"]').type(infoCustomer.city);
     cy.get('input[name="state"]').type(infoCustomer.state);
     cy.get('input[name="pinno"]').type(infoCustomer.pinno);
-    cy.get('input[name="telephoneno"]').type("012345678");
+    cy.get('input[name="telephoneno"]').type(infoCustomer.telephoneno);
     cy.get('input[name="emailid"]').type(infoCustomer.email);
     cy.get('input[name="password"]').type("abc123");
     cy.get("form").submit();
