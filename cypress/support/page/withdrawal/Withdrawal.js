@@ -10,7 +10,7 @@ export default class WithDrawalPage extends BasePage {
     this.submitButton = "[type=submit]";
   }
   navigateToWithDrawalPage = () => {
-    this.clickElement('.menusubnav:contains("Deposit")');
+    this.clickElement('a:contains("Deposit")');
     this.navigate(this.withDrawalPageUrl);
   };
   enterAccountId(accountId) {

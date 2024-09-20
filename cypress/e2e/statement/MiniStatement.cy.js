@@ -1,11 +1,8 @@
-import DepositPage from "../../support/page/deposit/Deposit";
+import MiniStatementInput from "../../support/page/statement/MiniStatement";
 import LoginPage from "../../support/page/auth/LoginPage";
-import { faker } from "@faker-js/faker";
-
-describe("Deposit Test", () => {
+describe("Balance Enquiry Test", () => {
   const loginPage = new LoginPage();
-  const depositPage = new DepositPage();
-
+  const miniStatement = new MiniStatementInput();
   before(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
@@ -16,13 +13,11 @@ describe("Deposit Test", () => {
     });
   });
 
-  it("Should a deposit successfully", () => {
+  it("Should balance enquiry successfully", () => {
     cy.fixture("data.json").then(({ accountId }) => {
-      depositPage.navigateToDepositPage();
-      depositPage.enterAccountId(accountId);
-      depositPage.enterAmount(faker.number.int({ min: 500 }));
-      depositPage.enterDesc(faker.lorem.paragraph(2));
-      depositPage.submitForm();
+      miniStatement.navigateToMiniStatementPage();
+      miniStatement.enterAccountId(accountId);
+      miniStatement.submitForm();
     });
   });
 });

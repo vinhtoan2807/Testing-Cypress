@@ -9,7 +9,7 @@ export default class DeleteCustomerPage extends BasePage {
   }
 
   navigateToDeleteCustomerPage() {
-    this.clickElement('.menusubnav:contains("Delete Customer")');
+    this.clickElement('a:contains("Delete Customer")');
     this.navigate(this.deleteCustomerPageUrl);
     console.log(`Navigating to: ${this.deleteCustomerPageUrl}`);
   }

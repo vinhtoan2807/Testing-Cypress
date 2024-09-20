@@ -16,7 +16,7 @@ export default class EditCustomerPage extends BasePage {
   }
 
   navigateToEditCustomerPage() {
-    this.clickElement('.menusubnav:contains("Edit Customer")');
+    this.clickElement('a:contains("Edit Customer")');
     this.navigate(this.editCustomerPageUrl);
   }
 

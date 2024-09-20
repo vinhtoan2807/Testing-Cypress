@@ -10,7 +10,7 @@ export default class ChangePasswordPage extends BasePage {
     this.submitButton = "[type=submit]";
   }
   navigateToChangePasswordPage = () => {
-    this.clickElement('.menusubnav:contains("Change Password")');
+    this.clickElement('a:contains("Change Password")');
     this.navigate(this.changePasswordPageUrl);
   };
   enterOldPassword(oldPwd) {

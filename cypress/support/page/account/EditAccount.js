@@ -9,7 +9,7 @@ export default class EditAccountPage extends BasePage {
   }
 
   navigateToEditAccountPage() {
-    this.clickElement('.menusubnav:contains("Edit Account")');
+    this.clickElement('a:contains("Edit Account")');
     this.navigate(this.editAccountPageUrl);
   }
 

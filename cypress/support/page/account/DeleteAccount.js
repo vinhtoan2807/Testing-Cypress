@@ -9,7 +9,7 @@ export default class DeleteAccountPage extends BasePage {
   }
 
   navigateToDeleteAccountPage() {
-    this.clickElement('.menusubnav:contains("Delete Account")');
+    this.clickElement('a:contains("Delete Account")');
     this.navigate(this.deleteAccountPageUrl);
   }
 

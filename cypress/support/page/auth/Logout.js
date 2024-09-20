@@ -6,7 +6,7 @@ export default class Logout extends BasePage {
     this.logoutPageUrl = "manager/Logout.php";
   }
   navigateToLogout = () => {
-    this.clickElement('.menusubnav:contains("Log out")');
+    this.clickElement('a:contains("Log out")');
     this.navigate(this.logoutPageUrl);
   };
   logout = () => {

@@ -10,7 +10,7 @@ export default class DepositPage extends BasePage {
     this.submitButton = "[type=submit]";
   }
   navigateToDepositPage = () => {
-    this.clickElement('.menusubnav:contains("Deposit")');
+    this.clickElement('a:contains("Deposit")');
     this.navigate(this.depositPageUrl);
   };
   enterAccountId(accountId) {

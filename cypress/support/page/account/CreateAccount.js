@@ -11,7 +11,7 @@ export default class CreateAccountPage extends BasePage {
   }
 
   navigateToNewAccountPage() {
-    this.clickElement('.menusubnav:contains("New Account")');
+    this.clickElement('a:contains("New Account")');
     this.navigate(this.accountPageUrl);
   }
 

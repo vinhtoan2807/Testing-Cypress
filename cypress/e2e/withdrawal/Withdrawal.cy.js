@@ -2,7 +2,7 @@ import WithDrawalPage from "../../support/page/withdrawal/Withdrawal";
 import LoginPage from "../../support/page/auth/LoginPage";
 import { faker } from "@faker-js/faker";
 
-describe("WithDrawal Functionality", () => {
+describe("WithDrawal Test", () => {
   const loginPage = new LoginPage();
   const withDrawalPage = new WithDrawalPage();
 
