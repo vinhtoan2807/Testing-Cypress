@@ -9,7 +9,6 @@ export default class MiniStatementPage extends BasePage {
   }
   navigateToMiniStatementPage = () => {
     this.clickElement('a:contains("Mini Statement")');
-    this.navigate(this.miniStatementPageUrl);
   };
   enterAccountId(accountId) {
     this.fillInput(this.accountIdField, accountId);

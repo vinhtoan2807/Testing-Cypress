@@ -3,7 +3,7 @@ import LoginPage from "../../support/page/auth/LoginPage";
 describe("Balance Enquiry Test", () => {
   const loginPage = new LoginPage();
   const miniStatement = new MiniStatementInput();
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);
@@ -13,7 +13,7 @@ describe("Balance Enquiry Test", () => {
     });
   });
 
-  it("Should balance enquiry successfully", () => {
+  it("Should a mini statement successfully", () => {
     cy.fixture("data.json").then(({ accountId }) => {
       miniStatement.navigateToMiniStatementPage();
       miniStatement.enterAccountId(accountId);

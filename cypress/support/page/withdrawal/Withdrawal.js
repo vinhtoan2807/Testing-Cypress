@@ -11,7 +11,6 @@ export default class WithDrawalPage extends BasePage {
   }
   navigateToWithDrawalPage = () => {
     this.clickElement('a:contains("Deposit")');
-    this.navigate(this.withDrawalPageUrl);
   };
   enterAccountId(accountId) {
     this.fillInput(this.accountIdField, accountId);

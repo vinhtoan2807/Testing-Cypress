@@ -3,7 +3,7 @@ import LoginPage from "../../support/page/auth/LoginPage";
 describe("Login Tests", () => {
   const loginPage = new LoginPage();
 
-  before(() => {
+  beforeEach(() => {
     loginPage.navigate(Cypress.config().baseUrl);
   });
 

@@ -1,4 +1,4 @@
-export default class BasePage {
+export class BasePage {
   navigate(url) {
     cy.visit(url);
   }
@@ -14,4 +14,11 @@ export default class BasePage {
   verifyText(selector, text) {
     cy.get(selector).should("contain.text", text);
   }
+  logOutFunc = () => {
+    this.clickElement('a:contains("Log out")');
+    cy.on("window:confirm", () => true);
+  };
+  verifyLogoutSuccess = () => {
+    this.verifyText("You Have Succesfully Logged Out!!");
+  };
 }

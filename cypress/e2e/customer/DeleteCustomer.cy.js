@@ -5,7 +5,7 @@ describe("Delete Customer Test", () => {
   const loginPage = new LoginPage();
   const deleteCustomer = new DeleteCustomerPage();
 
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);

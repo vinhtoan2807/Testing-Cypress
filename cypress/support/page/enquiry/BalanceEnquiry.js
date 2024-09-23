@@ -9,7 +9,6 @@ export default class BalanceEnquiryPage extends BasePage {
   }
   navigateToBalanceEnquiryPage = () => {
     this.clickElement('a:contains("Balance Enquiry")');
-    this.navigate(this.balanceEnquiryPageUrl);
   };
   enterAccountId(accountId) {
     this.fillInput(this.accountIdField, accountId);

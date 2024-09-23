@@ -5,7 +5,7 @@ describe("Edit Account Test", () => {
   const loginPage = new LoginPage();
   const editAccount = new EditAccountPage();
 
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);

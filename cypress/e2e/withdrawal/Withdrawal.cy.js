@@ -6,7 +6,7 @@ describe("WithDrawal Test", () => {
   const loginPage = new LoginPage();
   const withDrawalPage = new WithDrawalPage();
 
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);

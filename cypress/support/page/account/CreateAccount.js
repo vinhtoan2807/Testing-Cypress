@@ -12,7 +12,6 @@ export default class CreateAccountPage extends BasePage {
 
   navigateToNewAccountPage() {
     this.clickElement('a:contains("New Account")');
-    this.navigate(this.accountPageUrl);
   }
 
   enterCustomerId(customerId) {

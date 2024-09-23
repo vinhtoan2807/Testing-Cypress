@@ -1,10 +1,8 @@
 import LoginPage from "../../support/page/auth/LoginPage";
-import Logout from "../../support/page/auth/Logout";
 
 describe("Logout Test", () => {
   const loginPage = LoginPage();
-  const logOut = new Logout();
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);
@@ -14,8 +12,7 @@ describe("Logout Test", () => {
     });
   });
   it("should log out the user", () => {
-    logOut.navigateToLogout();
-    logOut.logout();
-    logOut.verifyLogoutSuccess();
+    loginPage.logOutFunc();
+    loginPage.verifyLogoutSuccess();
   });
 });

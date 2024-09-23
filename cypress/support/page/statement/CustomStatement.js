@@ -14,7 +14,6 @@ export default class CustomStatementPage extends BasePage {
 
   navigateToCustomStatementPage() {
     this.clickElement('a:contains("Customised Statement")');
-    this.navigate(this.customStatementPageUrl);
   }
   enterAccountId(accountId) {
     this.fillInput(this.accountIdField, accountId);

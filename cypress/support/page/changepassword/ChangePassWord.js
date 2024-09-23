@@ -11,7 +11,6 @@ export default class ChangePasswordPage extends BasePage {
   }
   navigateToChangePasswordPage = () => {
     this.clickElement('a:contains("Change Password")');
-    this.navigate(this.changePasswordPageUrl);
   };
   enterOldPassword(oldPwd) {
     this.fillInput(this.oldPwdField, oldPwd);
@@ -25,4 +24,7 @@ export default class ChangePasswordPage extends BasePage {
   submitForm() {
     this.clickElement(this.submitButton);
   }
+  verifyChangePassword = () => {
+    this.verifyText("window", "Password is Changed");
+  };
 }

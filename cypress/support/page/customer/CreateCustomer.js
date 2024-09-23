@@ -18,7 +18,6 @@ export default class CreateCustomerPage extends BasePage {
 
   navigateToNewCustomerPage() {
     this.clickElement('a:contains("New Customer")');
-    this.navigate(this.customerPageUrl);
   }
 
   enterCustomerName(name) {

@@ -6,7 +6,7 @@ describe("Create Customer Test", () => {
   const loginPage = new LoginPage();
   const addNewCustomer = new CreateCustomerPage();
 
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);

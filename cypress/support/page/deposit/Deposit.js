@@ -11,7 +11,6 @@ export default class DepositPage extends BasePage {
   }
   navigateToDepositPage = () => {
     this.clickElement('a:contains("Deposit")');
-    this.navigate(this.depositPageUrl);
   };
   enterAccountId(accountId) {
     this.fillInput(this.accountIdField, accountId);

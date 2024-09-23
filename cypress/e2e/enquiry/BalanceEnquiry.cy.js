@@ -3,7 +3,7 @@ import LoginPage from "../../support/page/auth/LoginPage";
 describe("Balance Enquiry Test", () => {
   const loginPage = new LoginPage();
   const balanceEnquiry = new BalanceEnquiryPage();
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);

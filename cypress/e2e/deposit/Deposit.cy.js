@@ -6,7 +6,7 @@ describe("Deposit Test", () => {
   const loginPage = new LoginPage();
   const depositPage = new DepositPage();
 
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);

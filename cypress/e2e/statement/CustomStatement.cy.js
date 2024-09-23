@@ -5,7 +5,7 @@ describe("Create Customer Test", () => {
   const loginPage = new LoginPage();
   const customStatement = new CustomStatementPage();
 
-  before(() => {
+  beforeEach(() => {
     cy.fixture("data.json").then((account) => {
       loginPage.navigate(Cypress.config().baseUrl);
       loginPage.enterUserId(account.uid);
@@ -14,7 +14,7 @@ describe("Create Customer Test", () => {
       loginPage.verifyLoginSuccessful();
     });
   });
-  it("Should a deposit successfully", () => {
+  it("Should a custom statement successfully", () => {
     cy.fixture("data.json").then(({ accountId }) => {
       customStatement.navigateToCustomStatementPage();
       customStatement.enterAccountId(accountId);
